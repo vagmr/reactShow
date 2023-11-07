@@ -1,0 +1,7 @@
+{
+    "editor.tokenColorCustomizations": {
+        "comments": {
+            "foreground": "#ff0000"
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.login {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(208, 20, 98);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(../assets/bg.png) center no-repeat;
+    background-size: cover;
+
+    /* 让背景图片铺满整个容器 */
+    .error {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 30px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 8px;
+        background-color: rgb(178, 34, 63);
+        color: white;
+    }
+
+    .loginBox {
+        width: 400px;
+        height: 300px;
+        background-color: rgb(192, 188, 188);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+
+        }
+
+        label {
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+
+        input {
+            width: 320px;
+            height: 30px;
+            margin-left: 20px;
+            box-shadow: 0 2px 1px 2px;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: rgb(168, 126, 111);
+            border: 1px solid skyblue;
+            color: whitesmoke;
+        }
+
+        input::placeholder {
+            color: #f4e2e9;
+        }
+
+        .btn {
+            display: block;
+            background-color: aqua;
+            width: 120px;
+            height: 34px;
+            margin: 20px auto;
+            padding: 5px;
+            border: 1px solid #ff3487;
+            border-radius: 5px;
+        }
+
+    }
+}
