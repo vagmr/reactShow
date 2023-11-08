@@ -13,10 +13,19 @@ import cors from 'cors'
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 
-//使用中间件
+//cors设置
+
+//中间件
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Credentials", true);
+    next();
+})
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors())
+app.use(cors({
+    origin: "http://localhost:5173",
+}))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')));
 
