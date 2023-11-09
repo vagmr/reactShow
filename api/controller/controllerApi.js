@@ -1,6 +1,23 @@
 import { db } from "../connect.js"
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
+
+/* 获取描述性文字 */
+export const getDesc = (req, res) => {
+    let sql = "select * from `desc`";
+    db.query(sql, (err, data) => {
+        if (err) return res.status(500).json({ code: 500, msg: "服务器内部错误", data: err })
+        return res.status(200).json({ code: 200, msg: "获取成功", data: data })
+    })
+}
+/* 获取评论 */
+export const getComment = (req, res) => {
+    let sql = "select id,name,comment,avater,cover from user"
+    db.query(sql, (err, data) => {
+        if (err) return res.status(500).json({ code: 500, msg: "服务器内部错误", data: err })
+        return res.status(200).json({ code: 200, msg: "获取成功", data: data })
+    })
+}
 export const getUser = (req, res) => {
     return res.send("Hello World!")
 }

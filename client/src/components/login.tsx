@@ -5,6 +5,7 @@ import axios from "axios"
 import { BASE_URL } from "../constant"
 import ShowInfo from "./info"
 import useUserStore from "../store/userStore"
+import { useHistory } from 'react-router-dom'
 
 const Login = (): ReactNode => {
     const setUserInfo = useUserStore(state => state.setUserInfo);
@@ -19,6 +20,8 @@ const Login = (): ReactNode => {
     //是否显示提示框
     const [isShow, setIsShow] = useState(false);
 
+    //路由跳转
+    const history = useHistory();
     const sub = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         const { username, password, email } = inputs;
@@ -47,6 +50,7 @@ const Login = (): ReactNode => {
             setUserInfo(res.data.data);
             setTimeout(() => {
                 setIsShow(false);
+                history.push('/home')
             }, 1000)
         }).catch(err => {
             setIsShow(true);

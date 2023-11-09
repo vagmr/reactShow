@@ -1,0 +1,97 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; // 背景颜色
+
+    .content {
+        margin-top: 120px;
+        text-align: center;
+        width: 500px;
+        padding: 20px;
+        background-color: #ffffff; // 内容背景颜色
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // 阴影
+        border-radius: 8px;
+
+        h1 {
+            font-family: "行书";
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .pos {
+            position: fixed;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .info {
+
+            background-color: #d7d7d7;
+            color: brown;
+            font-size: 24px;
+            text-align: center;
+            border: 2px solid cadetblue;
+            padding: 5px;
+        }
+
+        .author {
+            background-color: #d7d7d7;
+            color: rgb(33, 151, 177);
+            font-family: "华文彩云";
+            font-style: normal;
+            font-size: 26px;
+            text-align: center;
+            border: 2px solid cadetblue;
+            padding: 10px;
+        }
+    }
+
+    .itemList {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 1200px;
+        align-content: flex-start;
+    }
+
+    .item {
+        border: 2px solid #d7d7d7;
+        width: 270px;
+        padding: 0 5px;
+        margin-top: 12px;
+        cursor: pointer;
+
+        h1 {
+            font-family: "宋体";
+            font-size: 24px;
+            font-weight: 400;
+            text-align: center;
+
+            span {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                color: skyblue;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            color: rgb(14, 120, 161);
+            text-align: center;
+        }
+    }
+
+    .item:hover {
+        box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.3);
+        transform: scale(1.1);
+        background-color: whitesmoke;
+    }
+}
