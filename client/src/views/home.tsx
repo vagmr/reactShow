@@ -40,7 +40,7 @@ const HomeCom = () => {
                 <Header className="site-layout-background" style={{ padding: 0 }} />
 
                 <Content style={{ margin: '16px' }}>
-                    {/* 嵌套路由使用 */}
+                    {/* 嵌套路由使用,switch可以省略 */}
                     <Switch >
                         <Route path="/home" exact component={CommentList} />
                         <Route path="/home/apiDoc" component={ApiDoc} />

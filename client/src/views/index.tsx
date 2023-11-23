@@ -43,6 +43,7 @@ const Index = () => {
                     </div>)
                 })}
             </div>
+            <h1 onClick={() => history.push('/test')}>前往测试页</h1>
             <footer className=''></footer>
         </div>
     );

@@ -64,3 +64,14 @@ export const loginOut = (req, res) => {
         sameSite: "none",
     }).status(200).json({ code: 200, msg: "退出登录成功" })
 }
+
+
+/* 获取名言警句 */
+export const getQuotes = (req, res) => {
+    let sql = "select * from quotes ORDER BY RAND() LIMIT 1";
+
+    db.query(sql, (err, data) => {
+        if (err) return res.status(500).json({ code: 500, msg: "服务器错误", data: err })
+        return res.status(200).json({ code: 200, msg: "获取成功", data: data })
+    })
+}
